@@ -14,4 +14,5 @@ public class DaoFactory  {
 	public static PessoaDao criaPessoa(){
 		return new PessoaDao(emf);
 	}
+	public static EnderecoDao criaEndereco(){return new EnderecoDao(emf);}
 }

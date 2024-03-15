@@ -9,28 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e1d23bd-e467-438a-a33d-5b5a8e52c167" name="Changes" comment="feat - implementa Dao e model">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/bean/CadastroPessoaBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/DaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/EnderecoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/IPessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/PessoaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/model/Pessoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/service/PessoaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/utils/Cast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/cadastroPessoa/list_cadastroPessoa.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/template/templateMenus.xhtml" afterDir="false" />
+    <list default="true" id="2e1d23bd-e467-438a-a33d-5b5a8e52c167" name="Changes" comment="feat - implementando telas">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/IEndereco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/service/EnderecoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/bean/CadastroPessoaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/bean/CadastroPessoaEnderecoBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/EnderecoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/EnderecoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/PessoaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/PessoaDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/cadastroPessoa/list_cadastroPessoa.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/template/templateMenus.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template/templateMenus.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +90,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/template" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cadastro.pessoas.cadastropessoas.service" />
+      <recent name="com.cadastro.pessoas.cadastropessoas.dao" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Cadastro Pessoa">
@@ -309,7 +303,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710446831856</updated>
       <workItem from="1710446833062" duration="17193000" />
-      <workItem from="1710504797515" duration="8692000" />
+      <workItem from="1710504797515" duration="17145000" />
     </task>
     <task id="LOCAL-00001" summary="create - first commit">
       <option name="closed" value="true" />
@@ -319,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710447749872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat - implementando telas">
+      <option name="closed" value="true" />
+      <created>1710523740449</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710523740449</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,15 +330,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create - first commit" />
     <MESSAGE value="feat - implementa Dao e model" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat - implementa Dao e model" />
+    <MESSAGE value="feat - implementando telas" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat - implementando telas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/dao/DaoFactory.java</url>
-          <line>16</line>
+          <line>17</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cadastro/pessoas/cadastropessoas/bean/CadastroPessoaEnderecoBean.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

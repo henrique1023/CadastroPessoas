@@ -39,7 +39,8 @@ public class PessoaDao extends DaoFactory implements Serializable, IPessoa {
         EntityManager entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.remove(obj);
+        Pessoa pessoa = entityManager.find(Pessoa.class, obj.getId());
+        entityManager.remove(pessoa);
         transaction.commit();
     }
 

@@ -17,16 +17,6 @@
             <p:menuitem value="Inicio"
                         url="#{facesContext.externalContext.requestContextPath}/index.xhtml"
                         icon="pi pi-home"/>
-            <p:submenu label="Cadastro">
-                <p:column>
-                    <p:submenu label="Cadastros Basicos">
-                        <p:menuitem action="#{cadastroPessoa.listarPessoas()}"
-                                    value="Pessoas"/>
-<!--                        <p:menuitem action="#{cadastroPessoa.listarEndereco()}"-->
-<!--                                    value="Endereços"/>-->
-                    </p:submenu>
-                </p:column>
-            </p:submenu>
         </p:megaMenu>
     </h:form>
     <ui:insert name="conteudo">

@@ -4,6 +4,7 @@ package com.cadastro.pessoas.cadastropessoas.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pessoa")
@@ -20,6 +21,10 @@ public class Pessoa implements Serializable {
     Date idade;
     @Column(length = 2)
     String sexo;
+
+    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Endereco> enderecos;
+
     public Pessoa() {
         super();
     }
