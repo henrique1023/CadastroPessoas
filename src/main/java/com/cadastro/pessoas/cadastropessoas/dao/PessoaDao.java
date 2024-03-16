@@ -17,21 +17,23 @@ public class PessoaDao extends DaoFactory implements Serializable, IPessoa {
     }
 
     @Override
-    public void insert(Pessoa obj) {
+    public Pessoa insert(Pessoa obj) {
         EntityManager entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.persist(obj);
         transaction.commit();
+        return obj;
     }
 
     @Override
-    public void update(Pessoa obj) {
+    public Pessoa update(Pessoa obj) {
         EntityManager entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.merge(obj);
         transaction.commit();
+        return obj;
     }
 
     @Override

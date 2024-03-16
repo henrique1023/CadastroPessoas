@@ -9,12 +9,13 @@ import java.util.List;
 public class PessoaService {
 
     private PessoaDao dao = DaoFactory.criaPessoa();
-    public void saveOrUptade(Pessoa obj) {
+    public Pessoa saveOrUptade(Pessoa obj) {
         if(obj.getId() == null) {
-            dao.insert(obj);
+            obj = dao.insert(obj);
         }else {
-            dao.update(obj);
+            obj = dao.update(obj);
         }
+        return obj;
     }
 
     public Pessoa findById(Long id) {
