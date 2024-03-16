@@ -4,9 +4,14 @@ public class Cast {
 
     public static int toInteger(Object var){
         int aux = 0;
-        if(var != null) {
-            aux = Integer.parseInt(var.toString());
+        try{
+            if(var != null) {
+                aux = Integer.parseInt(var.toString());
+            }
+        }catch (Exception e){
+            return 0;
         }
+
         return aux;
     }
 
@@ -22,6 +27,18 @@ public class Cast {
         long aux = 0;
         if(var != null) {
             aux = Long.parseLong(var.toString());
+        }
+        return aux;
+    }
+
+    public static String toString(Object var) {
+        String aux = "";
+        try{
+            if(var != null) {
+                aux = var.toString();
+            }
+        }catch (Exception e){
+            return "";
         }
         return aux;
     }

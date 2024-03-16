@@ -89,6 +89,7 @@ public class CadastroPessoaEnderecoBean implements Serializable {
 
     public void salvarEndereco(){
         try {
+
             enderecoService.saveOrUptade(endereco, pessoa);
         } catch (Exception e) {
             throw new RuntimeException(e);

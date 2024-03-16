@@ -8,15 +8,14 @@
                       transaction-type="RESOURCE_LOCAL">
         <properties>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost/bancopessoa?useSSL=false&amp;serverTimezone=UTC&amp;createDatabaseIfNotExist=true" />
+                      value="jdbc:postgresql://localhost:5432/bancopessoas" />
             <property name="javax.persistence.jdbc.driver"
-                      value="com.mysql.cj.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.user" value="seu banco" />
-            <property name="javax.persistence.jdbc.password" value="sua senha" />
+                      value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="@host123" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
-            <!-- https://docs.jboss.org/hibernate/orm/5.4/javadocs/org/hibernate/dialect/package-summary.html -->
             <property name="hibernate.dialect"
-                      value="org.hibernate.dialect.MySQL8Dialect" />
+                      value="org.hibernate.dialect.PostgreSQL82Dialect" />
         </properties>
     </persistence-unit>
 </persistence>

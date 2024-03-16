@@ -23,7 +23,7 @@ public class Endereco implements Serializable {
     Integer numero;
     @Column(length = 8)
     String cep;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
 

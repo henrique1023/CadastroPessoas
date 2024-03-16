@@ -33,7 +33,7 @@
                 <p:column headerText="Endereço">
                     <div align="center">
                         <p:commandButton actionListener="#{cadastroPessoa.novoEndereco(obj.id)}"
-                                         icon="pi pi-pencil"
+                                         icon="pi pi-plus"
                                          title="Adicionar Endereço"
                                          update="formAdicionarEndereco"
                                          process="@this"
@@ -125,14 +125,14 @@
                                      size="30" maxlength="100" required="true"/>
                         <p:outputLabel value="Numero"/>
                         <p:inputText value="#{cadastroPessoa.endereco.numero}"
-                                     size="30" maxlength="6" id="numero" required="true">
-                            <f:validateRegex pattern="\d+" />
-                        </p:inputText>
+                                     validator="#{beanValidations.validateNumberType}"
+                                     immediate="true"
+                                     size="30" maxlength="6" id="numero" required="true"/>
                         <p:outputLabel value="CEP"/>
                         <p:inputText value="#{cadastroPessoa.endereco.cep}"
-                                     size="30" maxlength="8" id="cep" required="true">
-                            <f:validateRegex pattern="\d+"  />
-                        </p:inputText>
+                                     validator="#{beanValidations.validateNumberType}"
+                                     immediate="true"
+                                     size="30" maxlength="8" id="cep" required="true"/>
                     </p:panelGrid>
                 </div>
                 <p:panel>
@@ -170,8 +170,17 @@
                               <p:column headerText="CEP">
                                 <p:outputLabel value="#{obj.cep}"/>
                             </p:column>
+                            <p:column headerText="Açoes">
+                                <p:commandButton actionListener="#{cadastroPessoa.excluirEndereco(obj.id)}"
+                                                 icon="pi pi-trash"
+                                                 title="Remover"
+                                                 process="@this"
+                                                 update="formEnderecos formListagem"
+                                                 onclick="if (!confirm('Confirma a exclusão?')) return false"
+                                                 oncomplete="if(!args.validationFailed) {PF('dlgEnderecos').hide();}"
+                                />
+                            </p:column>
                         </div>
-
                 </p:dataTable>
             </h:form>
         </p:dialog>

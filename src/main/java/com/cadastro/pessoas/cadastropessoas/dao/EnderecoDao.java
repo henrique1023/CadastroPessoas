@@ -43,7 +43,8 @@ public class EnderecoDao implements IEndereco, Serializable {
         EntityManager entityManager = emf.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.remove(obj);
+        Endereco end = entityManager.find(Endereco.class, obj.getId());
+        entityManager.remove(end);
         transaction.commit();
     }
 
